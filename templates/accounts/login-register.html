@@ -1,0 +1,124 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Login / Register
+{% endblock title %}
+
+{% block content %}
+    <section class="login_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Login / New User Registration</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="error_message_area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="error_msg"> 
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %} 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="login_register_area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="login_form_area">
+                        <div class="form_title">
+                            <h2>Login</h2>
+                            <p>Existing Members</p>
+                        </div>
+                        <div class="form_field_area">
+                            <form action="" method="POST">
+                                <div class="full_field row">
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Your Email</p>
+                                        <input type="email" name="email" required>
+                                    </div>
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Password</p>
+                                        <input type="password" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="submit_button">
+                                    <input type="submit" value="Login">
+                                    <p>Forgotten your Password? <a href="">Click here</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="login_form_area">
+                        <div class="form_title">
+                            <h2>Signup</h2>
+                            <p>New User Registration</p>
+                        </div>
+                        <div class="form_field_area">
+                            <form action="" method="POST">{% csrf_token %}
+                                <div class="full_field row">
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Your Name:</p>
+                                        <input type="text" name="user_name" required>
+                                    </div>
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Your Email:</p>
+                                        <input type="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="full_field row">
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Password</p>
+                                        <input type="password" name="password" id="pass1" required>
+                                    </div>
+                                    <div class="single_form_field col-md-5 col-sm-12">
+                                        <p>Repeat Password</p>
+                                        <input type="password" name="password2" onkeyup="passwordCheck()" id="pass2" required>
+                                        <p id="error_check"></p>
+                                    </div>
+                                </div>
+
+                                <div class="submit_button register">
+                                    <input type="submit" value="Create Account">
+                                    <p><strong>Notice</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, enim!</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+
+{% block script %}
+    <script>
+        function passwordCheck(){
+            
+            pass1 = document.getElementById("pass1").value;
+            pass2 = document.getElementById("pass2").value;
+            console.log(pass1)
+            console.log(pass2)
+            if(pass1 == pass2){
+                document.getElementById("error_check").innerHTML = "Password matched"
+            }
+            else{
+                document.getElementById("error_check").innerHTML = "Password doesn't matched"
+            }
+
+        }
+    </script>
+{% endblock script %}
+    
+
+    

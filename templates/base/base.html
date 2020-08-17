@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+   <head>
+      <meta charset="utf-8">
+      <title>
+         {% block title %}
+         {% endblock title %}
+      </title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="apple-touch-icon" href="icon.png">
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <script src="https://kit.fontawesome.com/8cb663b767.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]--> 
+        {% include 'base/header.html' %}
+        
+        {% block content %}
+          
+        {% endblock content %}
+          
+
+        {% include 'base/footer.html' %}
+      <script src="{% static 'js/jquery.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>  
+
+      
+      {% block script %}
+         
+      {% endblock script %}
+         
+   </body>
+</html>
