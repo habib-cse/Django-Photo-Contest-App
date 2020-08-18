@@ -94,3 +94,10 @@ def gallery_list(request):
 
 def gallery_individual(request, id):
     return render(request, 'frontend/gallery_individual.html')
+
+def single_judge(request, id):
+    return render(request, 'frontend/single_judge.html')
+
+
+def judge_list(request):
+    return render(request, 'frontend/judge_list.html')

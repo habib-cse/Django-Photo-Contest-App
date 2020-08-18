@@ -11,5 +11,7 @@ urlpatterns = [
     path('phoconse/new-user-account-activate/<int:id>/active',views.user_active,name="user_active"),
     path('phoconse/gallery-list',views.gallery_list,name="gallery_list"),
     path('phoconse/gallery/<int:id>',views.gallery_individual,name="gallery_individual"),
+    path('phoconse/judge-list',views.judge_list,name="judge_list"),
+    path('phoconse/judge/<int:id>',views.single_judge,name="single_judge"),
 
 ]

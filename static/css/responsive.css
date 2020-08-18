@@ -3,11 +3,113 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 .column {width:750px}
 
+
+.indivi_gallery_title h3 {
+	font-size: 22px;
+}
+.indivi_back_home a {
+	font-size: 16px;
+	padding-top: 1px;
+}
 .single_judge {
 	float: left;
 	width: 33.33%;
 }
+.indvi_gallery_info {
+	padding: 140px 60px 150px;
+}
+.indvi_gallery_info h2 {
+	font-size: 32px;
+	margin-bottom: 15px;
+}
+.indvi_gallery_info p {
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+.indvi_gallery_info h4 {
+	font-size: 24px;
+}
+.judge_img {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.judge_img img {
+	width: 70%;
+}
+.judge_info {
+	width: 100%;
+    padding-left: 0;
+    text-align: center;
+}
+.judge_info h3 {
+    padding-top: 5px;
+    font-size: 16px;
+}
+.judge_info p {
+	font-size: 16px;
+}
+.judge_info a {
+	font-size: 16px;
+}
+.winner_list_title h3 {
+	font-size: 25px;
+}
+.winner_info h3, .winner_info h4 {
+	font-size: 17px;
+}
+.winner_info p {
+	font-size: 17px;
+}
+.similar_contest_title h3 {
+	font-size: 25px;
+}
+.contest_name h3 {
+	font-size: 17px;
+}
+.contest_date h4 {
+	font-size: 16px;
+}
+.contest_date p {
+	font-size: 16px;
+}
+.contest_judges h4 {
+	font-size: 16px;
+}
+.single_winner {
+	padding-bottom: 30px;
+}
+.similar_contest_gallery {
+	padding-bottom: 60px;
+}
 
+
+/* judge_list.html */
+.our_judge_title h2 {
+	font-size: 22px;
+}
+.judge_list_cont {
+	padding-top: 25px;
+}
+.judge_list_cont p {
+	font-size: 18px;
+}
+.winner_info.judge_prof p {
+	font-size: 16px;
+}
+.our_judge_list_area {
+	padding-bottom: 40px;
+}
+.our_single_judge {
+	padding-bottom: 30px;
+}
+.judge_personal_info p {
+	font-size: 16px;
+}
+.about_judge {
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
 
 
 
@@ -23,10 +125,145 @@
 
 .column {width:300px}
 
+.indivi_gallery_title {
+	text-align: center;
+}
+.indivi_gallery_title h3 {
+	font-size: 20px;
+}
+.indvi_gallery_info_area {
+	padding-top: 10px;
+}
+.indvi_gallery_info {
+	padding: 60px 5px 70px;
+}
+.indvi_gallery_info h2 {
+	font-size: 22px;
+	padding-bottom: 8px;
+	margin-bottom: 10px;
+}
+.indvi_gallery_info p {
+	font-size: 18px;
+	padding-bottom: 15px;
+}
+.indvi_gallery_info h4 {
+	font-size: 18px;
+}
+.judge_area h2 {
+	font-size: 20px;
+	padding-bottom: 8px;
+}
+.judge_info h3 {
+	font-size: 16px;
+}
+.judge_info p {
+	font-size: 16px;
+}
+.judge_info a {
+	font-size: 16px;
+}
+.judge_area {
+	padding: 15px 15px 30px;
+}
+.winner_list_title h3 {
+	font-size: 22px;
+}
+.winner_info h3, .winner_info h4 {
+	font-size: 16px;
+	padding-bottom: 3px;
+}
+.winner_info p {
+	font-size: 16px;
+}
+.indivi_back_home {
+	text-align: center;
+}
+.indivi_back_home a {
+	font-size: 16px;
+}
+.similar_contest_title h3 {
+	font-size: 20px;
+}
+.similar_contest_gallery .owl-prev {
+	display: none;
+}
+.similar_contest_gallery .owl-next {
+	display: none;
+}
+.contest_name h3 {
+	font-size: 17px;
+}
+.contest_date h4 {
+	font-size: 16px;
+}
+.contest_date p {
+	font-size: 16px;
+}
+.contest_judges h4 {
+	font-size: 16px;
+}
+.contest_judges ul li a {
+	font-size: 16px;
+}
+.similar_contest_gallery {
+	padding-bottom: 30px;
+}
+.single_winner {
+	padding-bottom: 20px;
+}
+.winner_list_title {
+	padding-top: 10px;
+}
+.similar_contest_title {
+	padding-top: 10px;
+}
+.single_winner .card-body {
+	padding: 15px;
+}
+.single_similar_slide .card-body {
+	padding: 15px;
+}
 
 
+/* judge_list.html */
+.our_judge_title h2 {
+	font-size: 18px;
+}
+.our_judge_area {
+	padding: 10px 0;
+}
+.judge_list_cont p {
+	font-size: 16px;
+	text-align: center;
+}
+.judge_list_cont {
+	padding-top: 20px;
+}
+.our_single_judge .card-body {
+	padding: 10px;
+}
+.our_single_judge {
+	padding-bottom: 20px;
+}
+.our_judge_list_area {
+	padding-bottom: 20px;
+}
 
-
+.about_judge {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+.about_judge h2 {
+	font-size: 18px;
+}
+.judge_personal_info p {
+	font-size: 16px;
+}
+.judge_details_area {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 
 
