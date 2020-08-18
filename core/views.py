@@ -87,4 +87,6 @@ def user_active(request, id):
     messages.success(request, "Congratulation!! your account is active now.")
     return redirect('core:user_registration')
 
- 
+
+def gallery_list(request):
+    return render(request, 'frontend/gallery_list.html')
