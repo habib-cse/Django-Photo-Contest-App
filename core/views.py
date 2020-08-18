@@ -10,17 +10,30 @@ host = 'http://127.0.0.1:8000/'
 admin_email = "habib41juwel@gmail.com"
 
 def home(request):
-    return render(request, 'accounts/login.html')
+    return render(request, 'frontend/index.html')
 
 def user_login(request):
     if request.method == 'POST':
-        useremail = request.POST['useremail']
-        password = request.POST['password']
-        check_user = User.objects.filter(email=useremail, password = password).first()
+        useremail = request.POST['email']
+        user_password = request.POST['password']
+        enc_pass = hashlib.md5(user_password.encode())
+        password = enc_pass.hexdigest()
+        check_user = User.objects.filter(email=useremail, password = password)
         if check_user.exists():
-            request.session['user_id'] = check_user.id
-            
+            check_user = check_user.first()
+            if not check_user.status:
+                messages.warning(request, "Your account is temporarily suspended !!!")
+                return redirect('core:login')
+            else:
+                request.session['user'] = check_user.id
+                return redirect('core:home') 
+        else:
+            messages.error(request,"Invalid Credential!!! Email or Password is not correct")
     return render(request, 'accounts/login-register.html')
+
+def user_logout(request):
+    request.session['user'] = None
+    return redirect('core:login')
 
 def user_registration(request):
     if request.method == 'POST':
