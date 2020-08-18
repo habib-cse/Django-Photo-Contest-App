@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    User Account activation
+{% endblock title %}
+
+{% block content %}
+    <section class="login_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Activation</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="error_message_area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="error_msg"> 
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %} 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="login_register_area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="login_form_area user_activation">
+                        <div class="user_activation"> 
+                            <p>You are successfully activated your account.</p>
+                            <a href="">Update Your Profile</a>
+                        </div> 
+                    </div> 
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %} 

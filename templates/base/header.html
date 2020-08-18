@@ -12,7 +12,8 @@
                 <div class="login_register_button">
                    
                    {% if request.session.user %}
-                     <a href="{% url 'core:user_logout' %}">Logout</a>
+                   <p>Wealcome <strong>{{ request.session.name }}</strong>
+                     <a href="{% url 'core:user_logout' %}">Logout</a></p>
                   {% else %}
                      <a href="{% url 'core:login' %}">Login / New User Registration</a>
                    {% endif %} 

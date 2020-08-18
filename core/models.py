@@ -1,10 +1,12 @@
 from django.db import models
-
+from django_countries.fields import CountryField
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class User(models.Model):
     user_id = models.CharField(max_length=50)
     name = models.CharField(max_length=150) 
+    activation_key = models.CharField(blank=True, null=True, max_length=300, unique=True)
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=70)
     image = models.ImageField(upload_to='upload/', blank=True, null=True)
@@ -15,7 +17,7 @@ class User(models.Model):
     twitter = models.CharField(max_length=50, blank=True, null=True)
     city = models.CharField(max_length=50, blank=True, null=True)
     state = models.CharField(max_length=50, blank=True, null=True)
-    country = models.CharField(max_length=50, blank=True, null=True)
+    country = CountryField(blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     active_status = models.BooleanField(default=False)
     status = models.BooleanField(default=False) 
@@ -40,11 +42,10 @@ class Judgecat(models.Model):
 
 
 class Judge(models.Model): 
-    name = models.CharField(max_length=100)
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100) 
     country = models.CharField(max_length=100)
-    category = models.ForeignKey(Judgecat, on_delete=models.CASCADE)
-    desc = models.TextField()
+    country = CountryField(blank=True, null=True)
+    desc = RichTextField()
     website = models.CharField(max_length=300, blank=True, null=True)
     facebook = models.CharField(max_length=300, blank=True, null=True)
     twitter = models.CharField(max_length=300, blank=True, null=True)

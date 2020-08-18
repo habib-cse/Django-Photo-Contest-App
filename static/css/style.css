@@ -3,6 +3,50 @@ h1,h2,h3,h4,p,a,ul{
     padding: 0;
 
 }
+.mt_10{
+	margin-top: 10px;
+}
+.mt_20{
+	margin-top: 20px;
+}
+.mt_30{
+	margin-top: 30px;
+}
+.mt_40{
+	margin-top: 40px;
+}
+.mt_50{
+	margin-top: 50px;
+}
+.mt_60{
+	margin-top: 60px;
+}
+.mt_70{
+	margin-top: 70px;
+}
+.mb_10{
+	margin-bottom: 10px;
+}
+.mb_20{
+	margin-bottom: 20px;
+}
+.mb_30{
+	margin-bottom: 30px;
+}
+.mb_40{
+	margin-bottom: 40px;
+}
+.mb_50{
+	margin-bottom: 50px;
+}
+.mb_60{
+	margin-bottom: 60px;
+}
+.mb_70{
+	margin-bottom: 70px;
+}
+
+
 a{
     text-decoration: none;
 }
@@ -27,12 +71,17 @@ ul,li{
 	float: left;
 	width: 70%;
 }
+
+.login_register_button strong {
+	text-decoration: underline;
+}
 .login_register_button a {
 	color: #212121;
 	font-size: 16px;
 	font-weight: 600;
 	padding-top: 5px;
 	display: inline-block;
+	margin-left: 30px;
 }
 .social_icons {
 	float: left;
@@ -193,4 +242,22 @@ ul,li{
 	position: absolute;
 	left: 15px;
 	margin-top: 2px;
+} 
+.login_form_area.user_activation {
+	text-align: center;
+	margin: 70px 0 120px;
+	padding: 60px 0 80px;
+}
+.user_activation p {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.user_activation a {
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	padding: 10px 60px;
+	font-size: 26px;
+	border-radius: 34px;
 }
