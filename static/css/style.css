@@ -1,3 +1,6 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
 h1,h2,h3,h4,p,a,ul{
     margin: 0;
     padding: 0;
@@ -242,6 +245,7 @@ ul,li{
 	position: absolute;
 	left: 15px;
 	margin-top: 2px;
+<<<<<<< HEAD
 } 
 .login_form_area.user_activation {
 	text-align: center;
@@ -260,4 +264,152 @@ ul,li{
 	padding: 10px 60px;
 	font-size: 26px;
 	border-radius: 34px;
+=======
+}
+
+
+
+
+
+/* gallery_list.html page css */
+.gallery_breadcrumb_area {
+	text-align: center;
+	padding: 90px 0;
+	background: #000;
+}
+.gallery_breadcrumb h2 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 900;
+	position: relative;
+	text-transform: capitalize;
+}
+.gallery_breadcrumb h2::after {
+	position: absolute;
+	background: #fff;
+	width: 100px;
+	height: 4px;
+	content: "";
+	top: 100%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: 7px;
+}
+.gallery_breadcrumb h4 {
+	padding-top: 24px;
+	color: #fff;
+	font-size: 35px;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+.priv_photo_gallery_area {
+	margin-top: 2px;
+	border-top: 2px solid #ddd;
+}
+.priv_photo_gallery {
+	padding-top: 32px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #1b2946;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.photo_gallery_left {
+	float: left;
+	width: 70%;
+}
+.photo_gallery_left h3 {
+	font-size: 30px;
+	font-weight: 900;
+	color: #000;
+	text-transform: capitalize;
+}
+.photo_gallery_right {
+	float: left;
+	width: 30%;
+	text-align: right;
+}
+.photo_gallery_right p {
+	font-size: 19px;
+	font-weight: 400;
+	color: #000;
+	padding-top: 7px;
+	text-transform: capitalize;
+}
+.single_photo_gallery .card-body {
+	background-color: #f3f3f3;
+	border-bottom: 3px solid #ddd;
+}
+.contest_name {
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #929292;
+	margin-bottom: 10px;
+}
+.contest_name h3 {
+	color: #000;
+	font-size: 22px;
+	font-weight: 900;
+}
+.contest_date {
+	padding-bottom: 15px;
+}
+.contest_date h4 {
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: capitalize;
+	color: #000000;
+}
+.contest_date p {
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: #000000;
+}
+.contest_judges {
+	padding-bottom: 12px;
+}
+.contest_judges h4 {
+	font-size: 18px;
+	text-transform: capitalize;
+	font-weight: 900;
+	color: #000000;
+}
+.contest_judges ul li {
+	display: inline;
+}
+.contest_judges ul li a {
+	font-size: 18px;
+	color: #000;
+	text-transform: capitalize;
+	font-weight: 400;
+	display: inline-block;
+}
+.single_photo_gallery {
+	padding-bottom: 20px;
+}
+.photo_contest_pagination {
+	padding-top: 30px;
+	padding-bottom: 75px;
+}
+.photo_contest_pagination .page-link {
+	color: #000;
+	background-color: #f3f3f3;
+	border: none;
+	transition: all 0.5s;
+	font-size: 16px;
+	font-weight: 700;
+}
+.photo_contest_pagination .page-link:hover {
+	color: #fff;
+	background-color: #1b2946;
+	border: none;
+	transition: all 0.5s;
+}
+
+.photo_contest_pagination .page-item {
+	padding: 0 5px;
+}
+.photo_contest_pagination .pagination {
+	width: 290px;
+	margin: 0 auto;
+>>>>>>> dev
 }
