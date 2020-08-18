@@ -37,7 +37,7 @@
                             <p>Existing Members</p>
                         </div>
                         <div class="form_field_area">
-                            <form action="" method="POST"> {% csrf_token %}
+                            <form action="{% url 'core:login' %}" method="POST"> {% csrf_token %}
                                 <div class="full_field row">
                                     <div class="single_form_field col-md-5 col-sm-12">
                                         <p>Your Email</p>
@@ -61,7 +61,7 @@
                             <p>New User Registration</p>
                         </div>
                         <div class="form_field_area">
-                            <form action="" method="POST">{% csrf_token %}
+                            <form action="{% url 'core:user_registration' %}" method="POST">{% csrf_token %}
                                 <div class="full_field row">
                                     <div class="single_form_field col-md-5 col-sm-12">
                                         <p>Your Name:</p>
