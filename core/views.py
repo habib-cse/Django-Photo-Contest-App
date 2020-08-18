@@ -141,3 +141,7 @@ def password_reset(request, value):
 
 def gallery_list(request):
     return render(request, 'frontend/gallery_list.html')
+
+
+def gallery_individual(request, id):
+    return render(request, 'frontend/gallery_individual.html')
