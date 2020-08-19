@@ -1,0 +1,97 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery page
+{% endblock title %}
+    
+{% block content %}
+    
+<section class="gallery_breadcrumb_area">
+    <div class="gallery_breadcrumb">
+        <h2>About Us</h2>
+        <h4>Your Photo Matters</h4>
+    </div>
+</section>
+
+<section class="about_us_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="about_content">
+                    <p class="top_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our_team_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="winner_list_title">
+                    <h3>Our Team</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="our_single_judge">
+                    <a href="">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'img/judges.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info judge_prof">
+                                    <h3>Sourabh Sohariya</h3>
+                                    <p>Landscape Photographer</p>
+                                    <p>India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="our_single_judge">
+                    <a href="">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'img/judges.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info judge_prof">
+                                    <h3>Sourabh Sohariya</h3>
+                                    <p>Landscape Photographer</p>
+                                    <p>India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="our_single_judge">
+                    <a href="">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'img/judges.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info judge_prof">
+                                    <h3>Sourabh Sohariya</h3>
+                                    <p>Landscape Photographer</p>
+                                    <p>India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

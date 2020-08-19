@@ -1,10 +1,197 @@
 {% extends '../base/base.html' %}
+{% load static %}
 
 {% block title %}
     Home page
 {% endblock title %}
     
 {% block content %}
-    <h2>this is a Home page</h2>
+
+<section class="home_slider_area">
+    <div class="home_slider_active owl-carousel">
+        <div class="home_single_slide">
+            <img src="{% static 'img/hs.jpg' %}" alt="">
+            <div class="slider_content">
+                <h1>Beautiful India</h1>
+                <h3>Phoconse Photo Contest</h3>
+                <p>Submit your entries before 31st March 2020</p>
+                <div class="latest_article_btn">
+                    <a href="">Submit Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="home_single_slide">
+            <img src="{% static 'img/hs.jpg' %}" alt="">
+            <div class="slider_content">
+                <h1>Beautiful India</h1>
+                <h3>Phoconse Photo Contest2</h3>
+                <p>Submit your entries before 31st March 2020</p>
+                <div class="latest_article_btn">
+                    <a href="">Submit Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="welcome_to_phoconse">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="welcome_phoconse_cont">
+                    <h2>Welcome to Phoconse</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <a href="">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature_gallery_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="feature_gallery_title">
+                    <h2>Featured Galleries</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="feature_single_item">
+                   <a href="">
+                        <img src="{% static 'img/feature.png' %}" alt="">
+                        <div class="feature_single_title">
+                            <h3>Urban Streets</h3>
+                        </div>
+                   </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="feature_single_item">
+                   <a href="">
+                        <img src="{% static 'img/feature.png' %}" alt="">
+                        <div class="feature_single_title">
+                            <h3>Urban Streets</h3>
+                        </div>
+                   </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="feature_single_item">
+                   <a href="">
+                        <img src="{% static 'img/feature.png' %}" alt="">
+                        <div class="feature_single_title">
+                            <h3>Urban Streets</h3>
+                        </div>
+                   </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="feature_single_item">
+                   <a href="">
+                        <img src="{% static 'img/feature.png' %}" alt="">
+                        <div class="feature_single_title">
+                            <h3>Urban Streets</h3>
+                        </div>
+                   </a>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="feature_gallery_btn">
+                    <a href="">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="latest_article_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="latest_article_title">
+                    <h2>Latest Articles</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="article_single_item">
+                    <div class="single_winner">
+                            <div class="card">
+                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info">
+                                    <h4>A Friendly Chat with Landscape Photographer Chris Phillips</h4>
+                                </div>
+                                <div class="article_btn">
+                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="article_single_item">
+                    <div class="single_winner">
+                            <div class="card">
+                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info">
+                                    <h4>A Friendly Chat with Landscape Photographer Chris Phillips</h4>
+                                </div>
+                                <div class="article_btn">
+                                    
+                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="article_single_item">
+                    <div class="single_winner">
+                            <div class="card">
+                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info">
+                                    <h4>A Friendly Chat with Landscape Photographer Chris Phillips</h4>
+                                </div>
+                                <div class="article_btn">
+                                    
+                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="article_single_item">
+                    <div class="single_winner">
+                            <div class="card">
+                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="winner_info">
+                                    <h4>A Friendly Landscape Photographer Chris Phillips</h4>
+                                </div>
+                                <div class="article_btn">
+                                    
+                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="latest_article_btn">
+                    <a href="">View All Articles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
 {% endblock content %}
     

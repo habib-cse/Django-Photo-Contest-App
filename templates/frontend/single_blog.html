@@ -1,0 +1,134 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery page
+{% endblock title %}
+    
+{% block content %}
+
+<section class="blog_breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="blog_breadcrumb_title">
+                    <h2>Blog</h2>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section class="single_blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-12">
+                <div class="blog_content_area">
+                    <div class="blog_header_content">
+                        <img src="{% static 'img/sb.jpg' %}" alt="">
+                        <p>March 5, 2020</p>
+                        <h2>Interview with Shorabh Guha - Our Prestigious Judge</h2>
+                    </div>
+                    <div class="blog_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img src="{% static 'img/sb.jpg' %}" alt="">
+                        <h4>Question</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="blog_share">
+                        <ul>
+                            <li class="share"><a href=""><i class="fas fa-share-alt"></i></a></li>
+                            <li class="shares"><a href="">21<span>shares</span></a></li>
+                            <li class="facebook"><a href=""><i class="fab fa-facebook-f"></i> <span>facebook</span></a></li>
+                            <li class="twitter"><a href=""><i class="fab fa-twitter"></i><span>twitter</span></a></li>
+                            <li class="pinterest"><a href=""><i class="fab fa-pinterest-p"></i><span>pinterest</span></a></li>
+                            <li class="google"><a href=""><i class="fab fa-google-plus-g"></i><span>google</span></a></li>
+                            <li class="linkedin"><a href=""><i class="fab fa-linkedin-in"></i><span>linkedin</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="blog_tags">
+                        <h3>tags: </h3>
+                        <ul>
+                            <li><a href="">Shorabh Guha,</a></li>
+                            <li><a href="">Indian Photographer,</a></li>
+                            <li><a href="">Daily Life,</a></li>
+                            <li><a href="">Interview</a></li>
+                        </ul>
+                    </div>
+                    <div class="related_blogs">
+                        <h3>You may also interested in</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="article_single_item">
+                                    <div class="single_winner">
+                                            <div class="card">
+                                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                            <div class="card-body">
+                                                <div class="winner_info">
+                                                    <h4>A Friendly Chat Chris Phillips</h4>
+                                                </div>
+                                                <div class="article_btn">
+                                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="article_single_item">
+                                    <div class="single_winner">
+                                            <div class="card">
+                                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                            <div class="card-body">
+                                                <div class="winner_info">
+                                                    <h4>A Friendly Chat Chris Phillips</h4>
+                                                </div>
+                                                <div class="article_btn">
+                                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="article_single_item">
+                                    <div class="single_winner">
+                                            <div class="card">
+                                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                            <div class="card-body">
+                                                <div class="winner_info">
+                                                    <h4>Inspiring Street Photography Showcase of Sasikumar Ramachandran</h4>
+                                                </div>
+                                                <div class="article_btn">
+                                                    <a href="">Read Full <span><i class="fas fa-caret-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12">
+                <div class="single_blog_sidebar">
+                    <!-- <img src="{% static 'img/bsidebar.png' %}" alt=""> -->
+                    <div class="blog_sidebar_cont">
+                        <h2>Beautiful <span>India</span></h2>
+                        <p>Phoconse <span>Photo Contest</span></p>
+                        <div class="latest_article_btn">
+                            <a href="">Submit Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+{% endblock content %}

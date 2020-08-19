@@ -101,3 +101,15 @@ def single_judge(request, id):
 
 def judge_list(request):
     return render(request, 'frontend/judge_list.html')
+
+def photo_contest(request):
+    return render(request, 'frontend/photo_contest.html')
+
+def blog_list(request):
+    return render(request, 'frontend/blog_list.html')
+
+def single_blog(request, id):
+    return render(request, 'frontend/single_blog.html')
+
+def about_us(request):
+    return render(request, 'frontend/about_us.html')

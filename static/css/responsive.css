@@ -110,6 +110,108 @@
 	padding-bottom: 12px;
 	margin-bottom: 12px;
 }
+.gallery_breadcrumb h2 {
+	font-size: 48px;
+}
+.gallery_breadcrumb h4 {
+	padding-top: 20px;
+	font-size: 30px;
+}
+.gallery_breadcrumb_area {
+	padding: 75px 0;
+}
+.photo_gallery_left h3 {
+	font-size: 28px;
+}
+.upcoming_cont img, .ongoing_cont img {
+	width: 80%;
+}
+.priv_photo_gallery_area.photo_contest_area {
+	padding-bottom: 40px;
+}
+.slider_content {
+	padding-top: 100px;
+}
+.home_single_slide h1 {
+	font-size: 60px;
+}
+.home_single_slide h3 {
+	font-size: 25px;
+	padding-bottom: 5px;
+}
+.home_single_slide p {
+	font-size: 25px;
+}
+.welcome_phoconse_cont a, .feature_gallery_btn a, .latest_article_btn a {
+	font-size: 20px;
+	padding: 9px 45px;
+}
+.welcome_to_phoconse {
+	padding: 45px 10% 60px;
+}
+.welcome_phoconse_cont h2, .feature_gallery_title h2, .latest_article_title h2 {
+	font-size: 25px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.welcome_phoconse_cont p {
+	font-size: 20px;
+}
+.feature_gallery_area {
+	padding: 40px 0;
+}
+.feature_single_title h3 {
+	font-size: 20px;
+	padding: 18px 0;
+}
+.latest_article_area {
+	padding: 40px 0;
+}
+.article_single_item .winner_info {
+	min-height: 120px;
+}
+.article_single_item a {
+	font-size: 16px;
+}
+.feature_single_item {
+	margin-bottom: 30px;
+}
+.blog_breadcrumb {
+	padding: 15px 0;
+}
+.blog_breadcrumb_title h2 {
+	font-size: 22px;
+}
+.blog_header_content p {
+	font-size: 18px;
+}
+.blog_header_content h2 {
+	font-size: 28px;
+}
+.facebook a, .twitter a, .pinterest a, .google a, .linkedin a {
+	margin-bottom: 15px;
+}
+.single_blog_sidebar {
+	padding: 30px 0 20px;
+}
+.blog_sidebar_cont h2 {
+	font-size: 30px;
+}
+.blog_sidebar_cont p {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+.single_blog_sidebar .latest_article_btn a {
+	font-size: 16px;
+	padding: 8px 24px;
+}
+
+
+
+
+
+
 
 
 
@@ -264,7 +366,154 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.gallery_breadcrumb_area {
+	padding: 30px 0;
+}
+.gallery_breadcrumb h2 {
+	font-size: 35px;
+}
+.gallery_breadcrumb h2::after {
+	width: 90px;
+	height: 2px;
+	margin-left: -45px;
+	margin-top: 5px;
+}
+.gallery_breadcrumb h4 {
+	padding-top: 20px;
+	font-size: 24px;
+}
+.photo_gallery_left {
+	width: 100%;
+}
+.photo_gallery_left h3 {
+	font-size: 24px;
+}
+.priv_photo_gallery {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.priv_photo_gallery_area.photo_contest_area {
+	padding-bottom: 20px;
+}
 
+
+.slider_content {
+	padding-top: 5px;
+}
+.home_single_slide h1 {
+	font-size: 35px;
+}
+.home_single_slide h3 {
+	font-size: 22px;
+	padding-bottom: 0px;
+}
+.home_single_slide p {
+	font-size: 20px;
+	padding-bottom: 5px;
+}
+.welcome_to_phoconse {
+	padding: 30px 2% 40px;
+}
+.welcome_phoconse_cont p {
+	font-size: 16px;
+	padding-bottom: 15px;
+}
+.welcome_phoconse_cont a, .feature_gallery_btn a, .latest_article_btn a {
+	font-size: 16px;
+	padding: 8px 36px;
+}
+.feature_gallery_area {
+	padding: 20px 0;
+}
+.welcome_phoconse_cont h2, .feature_gallery_title h2, .latest_article_title h2 {
+	font-size: 22px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+.feature_single_title h3 {
+	font-size: 18px;
+	padding: 12px 0;
+}
+.feature_single_item {
+	margin-bottom: 20px;
+}
+.latest_article_area {
+	padding: 20px 0;
+}
+.article_single_item .winner_info {
+	min-height: 70px;
+}
+.article_single_item a {
+	font-size: 16px;
+}
+.home_slider_area .owl-dots {
+	display: none;
+}
+.home_single_slide img {
+	height: 190px;
+}
+.priv_photo_gallery_area.blog_list {
+	padding-top: 30px;
+}
+.blog_breadcrumb {
+	padding: 12px 0;
+}
+.blog_breadcrumb_title h2 {
+	font-size: 20px;
+}
+.single_blog_area {
+	padding-top: 20px;
+}
+.blog_header_content img {
+	padding-bottom: 5px;
+}
+.blog_header_content p {
+	font-size: 16px;
+}
+.blog_header_content h2 {
+	font-size: 20px;
+}
+.blog_header_content {
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.blog_content img {
+	width: 100%;
+}
+.blog_content h4 {
+	padding: 10px 0;
+}
+.blog_content p {
+	padding-bottom: 10px;
+}
+.facebook a, .twitter a, .pinterest a, .google a, .linkedin a {
+	margin-bottom: 10px;
+}
+.blog_tags ul li a {
+	font-size: 16px;
+}
+.blog_tags h3 {
+	font-size: 16px;
+	padding-bottom: 3px;
+}
+.blog_tags {
+	padding-bottom: 25px;
+}
+.single_blog_sidebar {
+	padding: 20px 0 25px;
+	margin-bottom: 15px;
+}
+.blog_sidebar_cont h2 {
+	font-size: 36px;
+}
+.blog_sidebar_cont h2 span {
+	display:block ;
+}
+.blog_sidebar_cont p {
+	font-size: 25px;
+	padding-top: 12px;
+	padding-bottom: 20px;
+}
 
 
 

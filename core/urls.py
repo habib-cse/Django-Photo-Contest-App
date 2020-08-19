@@ -13,5 +13,9 @@ urlpatterns = [
     path('phoconse/gallery/<int:id>',views.gallery_individual,name="gallery_individual"),
     path('phoconse/judge-list',views.judge_list,name="judge_list"),
     path('phoconse/judge/<int:id>',views.single_judge,name="single_judge"),
+    path('phoconse/photo-contest',views.photo_contest,name="photo_contest"),
+    path('phoconse/blog-list',views.blog_list,name="blog_list"),
+    path('phoconse/blog/<int:id>',views.single_blog,name="single_blog"),
+    path('phoconse/about-us',views.about_us,name="about_us"),
 
 ]
