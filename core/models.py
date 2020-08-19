@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class User(models.Model):
-    user_id = models.CharField(max_length=50)
+    custom_user_id = models.CharField(max_length=50)
     name = models.CharField(max_length=150) 
     activation_key = models.CharField(blank=True, null=True, max_length=300, unique=True)
     email = models.EmailField(max_length=254)
@@ -27,7 +27,7 @@ class User(models.Model):
         verbose_name_plural = 'Users'
 
     def __str__(self):
-        return "{} - {}".format(self.name, self.user_id)
+        return "{} - {}".format(self.name, self.custom_user_id)
 
 class Judgecat(models.Model):
     category = models.CharField(max_length=300)
@@ -106,10 +106,19 @@ class Contest(models.Model):
         return self.contest_name
 
 
+def get_upload_path(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = '{}.{}'.format(instance.photo_id, ext)  
+    contests = instance.contest.contest_name.lower()
+    contests_name = contests.replace(" ", "-")
+    return 'contest-image/{0}/{1}'.format(contests_name, filename)
+  
+
+
 class Contestimg(models.Model): 
     photo_id = models.IntegerField()
     contest = models.ForeignKey(Contest, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='contest-image/')
+    image = models.ImageField(upload_to=get_upload_path)
     image_title = models.CharField(max_length=340)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
@@ -119,6 +128,10 @@ class Contestimg(models.Model):
 
     def __str__(self): 
         return "{} - {}".format(self.image_title, self.photo_id)
+    
+    def return_contest(self):
+        contest = self.contest
+        return contest.contest_name
 
 
 class Gallery(models.Model): 

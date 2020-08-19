@@ -13,12 +13,12 @@
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <div class="indivi_gallery_title">
-                    <h3>Holi - Festival of Colors</h3>
+                    <h3>{{gallery.title}}</h3>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="indivi_back_home">
-                    <a href=""><span><i class="fas fa-angle-double-left"></i></span>Back to Gallery</a>
+                    <a href="{% url 'core:gallery_list' %}"><span><i class="fas fa-angle-double-left"></i></span>Back to Gallery</a>
                 </div>
             </div>
         </div>
@@ -30,44 +30,28 @@
         <div class="row">
             <div class="col-lg-9 col-md-12">
                 <div class="indvi_gallery_info">
-                    <h2>Holi - Festival of Colors</h2>
-                    <p>There are more than 4,500 photographs submitted around the world. Here are the 3 winners and 25 best entries of this contest.</p>
-                    <h4>Winners announced on: 20th March 2020</h4>
+                    <h2>{{gallery.title}}</h2>
+                    <p>{{gallery.gallery_desc}}</p>
+                    <h4>Winners announced on: {{ gallery.announced_date|date:'M d, Y' }}</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-12">
                 <div class="judge_area">
                     <h2>Judges Info</h2>
-                    <div class="single_judge">
-                        <div class="judge_img">
-                            <img src="{% static 'img/judge.png' %}" alt="">
+                    
+                    {% for item in gallery.judges.all %}
+                        <div class="single_judge">
+                            <div class="judge_img">
+                                <img src="{{item.image.url}}" alt="">
+                            </div>
+                            <div class="judge_info">
+                                <h3>{{item}}</h3>
+                                <p>{{item.category}}, {{item.get_country_display}}</p>
+                                <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
+                            </div>
                         </div>
-                        <div class="judge_info">
-                            <h3>Sourabh Sohariya</h3>
-                            <p>Landscape Photographer, India</p>
-                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="single_judge">
-                        <div class="judge_img">
-                            <img src="{% static 'img/judge.png' %}" alt="">
-                        </div>
-                        <div class="judge_info">
-                            <h3>Sourabh Sohariya</h3>
-                            <p>Landscape Photographer, India</p>
-                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="single_judge">
-                        <div class="judge_img">
-                            <img src="{% static 'img/judge.png' %}" alt="">
-                        </div>
-                        <div class="judge_info">
-                            <h3>Sourabh Sohariya</h3>
-                            <p>Landscape Photographer, India</p>
-                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
-                        </div>
-                    </div>
+                    {% endfor %} 
+
                 </div>
             </div>
         </div>
@@ -81,17 +65,18 @@
                 <div class="winner_list_title">
                     <h3>Winners</h3>
                 </div>
-            </div>
+            </div> 
+                
             <div class="col-lg-4 col-md-4">
                 <div class="single_winner">
                     <a href="">
                         <div class="card">
-                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <img class="card-img-top" src="{{first_image.image.url}}" alt="Card image cap">
                             <div class="card-body">
                                 <div class="winner_info">
                                     <h3>1st Place</h3>
-                                    <h4>Children Playing on Holi</h4>
-                                    <p>Deepak Sharma</p>
+                                    <h4>{{first_image.image_title}}</h4>
+                                    <p>{{first_image.user.name}}</p>
                                 </div>
                             </div>
                         </div>
@@ -102,12 +87,12 @@
                 <div class="single_winner">
                     <a href="">
                         <div class="card">
-                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <img class="card-img-top" src="{{second_image.image.url}}" alt="">
                             <div class="card-body">
                                 <div class="winner_info">
-                                    <h3>1st Place</h3>
-                                    <h4>Children Playing on Holi</h4>
-                                    <p>Deepak Sharma</p>
+                                    <h3>2nd Place</h3>
+                                    <h4>{{second_image.image_title}}</h4>
+                                    <p>{{second_image.user.name}}</p>
                                 </div>
                             </div>
                         </div>
@@ -118,18 +103,19 @@
                 <div class="single_winner">
                     <a href="">
                         <div class="card">
-                            <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                            <img class="card-img-top" src="{{third_image.image.url}}" alt="">
                             <div class="card-body">
                                 <div class="winner_info">
-                                    <h3>1st Place</h3>
-                                    <h4>Children Playing on Holi</h4>
-                                    <p>Deepak Sharma</p>
+                                    <h3>3rd Place</h3>
+                                    <h4>{{third_image.image_title}}</h4>
+                                    <p>{{third_image.user.name}}</p>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -142,51 +128,354 @@
                     <h3>Best Entries</h3>
                 </div>
             </div>
+            
+            
+            {% if ent1_image %}
             <div class="col-lg-4 col-md-4">
-                <div class="single_winner">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="winner_info">
-                                <h4>Children Playing on Holi</h4>
-                                <p>Deepak Sharma</p>
-                            </div>
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent1_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent1_image.image_title}}</h4>
+                            <p>{{ent1_image.user.name}}</p>
                         </div>
-                      </div>
-                    </a>
+                    </div> 
                 </div>
             </div>
+            {% endif %}
+
+            {% if ent2_image %}
             <div class="col-lg-4 col-md-4">
-                <div class="single_winner">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="winner_info">
-                                <h4>Children Playing on Holi</h4>
-                                <p>Deepak Sharma</p>
-                            </div>
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent2_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent2_image.image_title}}</h4>
+                            <p>{{ent2_image.user.name}}</p>
                         </div>
-                      </div>
-                    </a>
+                    </div> 
                 </div>
             </div>
+            {% endif %}
+            {% if ent3_image %}
             <div class="col-lg-4 col-md-4">
-                <div class="single_winner">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="winner_info">
-                                <h4>Children Playing on Holi</h4>
-                                <p>Deepak Sharma</p>
-                            </div>
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent3_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent3_image.image_title}}</h4>
+                            <p>{{ent3_image.user.name}}</p>
                         </div>
-                      </div>
-                    </a>
+                    </div> 
                 </div>
             </div>
+            {% endif %}
+
+            {% if ent4_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent4_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent4_image.image_title}}</h4>
+                            <p>{{ent4_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent5_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent5_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent5_image.image_title}}</h4>
+                            <p>{{ent5_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent6_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent6_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent6_image.image_title}}</h4>
+                            <p>{{ent6_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent7_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent7_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent7_image.image_title}}</h4>
+                            <p>{{ent7_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent8_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent4_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent8_image.image_title}}</h4>
+                            <p>{{ent8_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent9_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent9_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent9_image.image_title}}</h4>
+                            <p>{{ent9_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent10_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent10_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent10_image.image_title}}</h4>
+                            <p>{{ent10_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent11_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent11_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent11_image.image_title}}</h4>
+                            <p>{{ent11_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+            {% if ent12_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent12_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent12_image.image_title}}</h4>
+                            <p>{{ent12_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent13_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent13_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent13_image.image_title}}</h4>
+                            <p>{{ent13_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent14_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent14_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent14_image.image_title}}</h4>
+                            <p>{{ent14_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent15_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent15_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent15_image.image_title}}</h4>
+                            <p>{{ent15_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent16_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent16_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent16_image.image_title}}</h4>
+                            <p>{{ent16_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent17_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent17_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent17_image.image_title}}</h4>
+                            <p>{{ent17_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent18_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent18_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent18_image.image_title}}</h4>
+                            <p>{{ent18_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent19_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent19_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent19_image.image_title}}</h4>
+                            <p>{{ent19_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent20_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent20_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent20_image.image_title}}</h4>
+                            <p>{{ent20_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent21_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent21_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent21_image.image_title}}</h4>
+                            <p>{{ent21_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent22_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent22_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent22_image.image_title}}</h4>
+                            <p>{{ent22_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent23_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent23_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent23_image.image_title}}</h4>
+                            <p>{{ent23_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ent24_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent24_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent24_image.image_title}}</h4>
+                            <p>{{ent24_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+
+
+
+            {% if ent25_image %}
+            <div class="col-lg-4 col-md-4">
+                <div class="single_winner"> 
+                    <div class="card">
+                        <img class="card-img-top" src="{{ent25_image.image.url}}" alt="">
+                        <div class="card-body winner_info"> 
+                            <h4>{{ent25_image.image_title}}</h4>
+                            <p>{{ent25_image.user.name}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            {% endif %}
+                
+            
+             
+
         </div>
     </div>
 </section>

@@ -1,5 +1,5 @@
 {% extends '../base/base.html' %}
-
+{% load extra_tags %}
 {% load static %}
 
 {% block title %}
@@ -24,210 +24,47 @@
                         <h3>Previous Photo Contests Galleries</h3>
                     </div>
                     <div class="photo_gallery_right">
-                        <p>22 Galleries</p>
+                        <p>{{total_gallery}} Galleries</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
+            
+            {% if gallery_list %} 
+                
+                {% for gallery in gallery_list %}  
+                    
+                <div class="col-lg-4">
+                    <div class="single_photo_gallery">
+                        <a href="{% url 'core:gallery_individual' gallery.id %}">
+                            <div class="card">
+                            <img class="card-img-top" src="{{ gallery.gallery_image.url }}" alt="">
+                            <div class="card-body">
+                                <div class="contest_name">
+                                    <h3>{{gallery.title}}</h3>
+                                </div>
+                                <div class="contest_date">
+                                    <h4>Month & Year:</h4> 
+                                    <p>{{ gallery.announced_date|date:'F, o' }}</p>
+                                </div>
+                                <div class="contest_judges">
+                                    <h4>judges:</h4>
+                                    <ul> 
+                                        {% for judge in gallery.judges.all %}
+                                            <li><a href="">{{judge}},</a></li>
+                                        {% endfor %} 
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
+                {% endfor %}
+            {% else %}
+                <div class="error_text">
+                    <p>Sorry!! No item found</p>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single_photo_gallery">
-                    <a href="">
-                        <div class="card">
-                        <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="contest_name">
-                                <h3>Holi - Festival of Colors</h3>
-                            </div>
-                            <div class="contest_date">
-                                <h4>Month & Year:</h4>
-                                <p>March 2020</p>
-                            </div>
-                            <div class="contest_judges">
-                                <h4>judges:</h4>
-                                <ul>
-                                    <li><a href="">Sourabh Sohariya,</a></li>
-                                    <li><a href=""> Geeta Surapaneni</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="photo_contest_pagination">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">....</li>
-                          <li class="page-item"><a class="page-link" href="#">10</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 </section>

@@ -354,7 +354,7 @@ ul,li{
 }
 .contest_date h4 {
 	font-size: 18px;
-	font-weight: 900;
+	font-weight: 700;
 	text-transform: capitalize;
 	color: #000000;
 }
@@ -370,7 +370,7 @@ ul,li{
 .contest_judges h4 {
 	font-size: 18px;
 	text-transform: capitalize;
-	font-weight: 900;
+	font-weight: 700;
 	color: #000000;
 }
 .contest_judges ul li {
