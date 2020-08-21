@@ -1,0 +1,151 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery page
+{% endblock title %}
+    
+{% block content %}
+ 
+<section class="our_judge_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="our_judge_title">
+                    <h2>My Account</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="update_profile_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="update_profile_top">
+                    <ul>
+                        <li><a href="">Update Your Profile</a></li>
+                        <li><a href="">Change Password</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="update_profile_btm">
+                    <form action="">
+                        <div class="entet_info">
+                            <h3>Update Your Profile</h3>
+                            <p>Enter the below details</p>
+                        </div>
+                        <div class="name_update">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="name">
+                                        <label for="">Name:</label>
+                                        <select name="name" class="form-control">
+                                            <option value="">Mr</option>
+                                            <option value="">Ms</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                   <div class="first_name">
+                                        <label for="">First Name:</label>
+                                        <input type="text" name="first_name" class="form-control" placeholder="Venkat">
+                                   </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="last_name">
+                                        <label for="">Last Name:</label>
+                                        <input type="text" name="last_name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upload_picture">
+                            <label for="">Upload your Profile Picture (500x500px):</label>
+                            <input type="file" name="pro_pic" class="form-control">
+                        </div>
+                        <div class="personal_info">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="email">
+                                        <label for="">Email:</label>
+                                       <input type="email" name="email" class="form-control" placeholder="venkat.p@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                   <div class="phone">
+                                        <label for="">Phone:</label>
+                                        <input type="text" name="phone" class="form-control">
+                                   </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="website">
+                                        <label for="">Website:</label>
+                                        <input type="text" name="website" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="update_social_media">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="face_book">
+                                        <label for="">Facebook:</label>
+                                        <input type="text" name="facebook" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                   <div class="insta_gram">
+                                        <label for="">Instagram:</label>
+                                        <input type="text" name="instagram" class="form-control">
+                                   </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="twiter">
+                                        <label for="">Twitter:</label>
+                                        <input type="text" name="twitter" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="update_addr">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="city">
+                                        <label for="">City:</label>
+                                        <input type="text" name="city" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                   <div class="state">
+                                        <label for="">State:</label>
+                                        <input type="text" name="static" class="form-control">
+                                   </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="country">
+                                        <label for="">Country:</label>
+                                        <select name="country" class="form-control">
+                                            <option value="">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="update_bio">
+                            <label for="">Bio:</label>
+                            <textarea name="bio" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="save_btn">
+                            <input type="submit" value="SAVE">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content%}

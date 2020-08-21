@@ -113,3 +113,18 @@ def single_blog(request, id):
 
 def about_us(request):
     return render(request, 'frontend/about_us.html')
+
+def contest_detail(request, id):
+    return render(request, 'frontend/contest_detail.html')
+
+def update_profile(request, id):
+    return render(request, 'frontend/update_profile.html')
+
+def contact_us(request):
+    return render(request, 'frontend/contact_us.html')
+
+def privacy_policy(request):
+    return render(request, 'frontend/privacy_policy.html')
+
+def trums_condition(request):
+    return render(request, 'frontend/trums_condition.html')

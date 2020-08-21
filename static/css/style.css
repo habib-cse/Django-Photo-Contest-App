@@ -978,6 +978,120 @@ ul,li{
 	padding-bottom: 30px;
 }
 
+/* contest-detail page css */
+.indvi_gallery_info.contest_detail p {
+	padding-bottom: 5px;
+}
+.indvi_gallery_info.contest_detail {
+	background: rebeccapurple;
+}
+.latest_article_btn.contest_btn a {
+	margin-top: 20px;
+}
+.contest_detail_info_area {
+	padding-bottom: 60px;
+}
+.contest_info h4 {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: capitalize;
+	padding-bottom: 5px;
+}
+.contest_info p {
+	padding-bottom: 20px;
+	font-size: 18px;
+	font-weight: 400;
+}
+.prize_info {
+	padding-bottom: 20px;
+}
+.prize_info ul li {
+	font-size: 18px;
+	font-weight: 400;
+}
+.copyright_info p {
+	padding-bottom: 10px;
+}
+.contest_submit_btn a {
+	background: #1b2946;
+	color: #fff;
+	font-size: 27px;
+}
+.contest_name.other_contest {
+	border-bottom: 1px solid #c5c5c5;
+}
+
+/* update-profile page css */
+.update_profile_area {
+	background: #fff;
+	padding-top: 20px;
+	padding-bottom: 95px;
+}
+.update_profile_top {
+	background: #f3f3f3;
+	margin-bottom: 15px;
+}
+.update_profile_top ul li {
+	display: inline;
+	margin-right: -4px;
+}
+.update_profile_top ul li a {
+	display: inline-block;
+	padding: 15px 30px;
+	border-right: 1px solid #ddd;
+	color: #000;
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: capitalize;
+	transition: all 0.5s;
+}
+.update_profile_top ul li a:hover {
+	background: #1b2946;
+	color: #fff;
+}
+.update_profile_btm {
+	padding: 35px 25px 40px;
+	background: #f3f3f3;
+	border-bottom: 3px solid #ddd;
+}
+.entet_info {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.entet_info h3 {
+	font-size: 21px;
+	font-weight: 700;
+	text-transform: capitalize;
+	padding-bottom: 3px;
+}
+.entet_info p {
+	font-size: 21px;
+	font-weight: 400;
+	color: #192746;
+}
+.update_profile_btm label {
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.name_update, .upload_picture, .personal_info, .update_social_media, .update_addr, .update_bio {
+	padding-bottom: 20px;
+}
+.update_profile_btm input {
+	font-size: 17px;
+	color: #333333;
+	font-weight: 400;
+}
+.save_btn input {
+	background: #1b2946 !important;
+	padding: 15px 60px;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+
 
 
 

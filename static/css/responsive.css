@@ -206,6 +206,46 @@
 	font-size: 16px;
 	padding: 8px 24px;
 }
+.contest_info h4 {
+	font-size: 18px;
+}
+.contest_info p {
+	padding-bottom: 18px;
+	font-size: 16px;
+}
+.prize_info ul li {
+	font-size: 16px;
+}
+.copyright_info p {
+	padding-bottom: 8px;
+}
+.contest_detail_info_area {
+	padding-bottom: 45px;
+}
+.about_us_content {
+	padding: 40px 0 10px;
+}
+.about_content p {
+	padding-bottom: 20px;
+	font-size: 17px;
+}
+.update_profile_top ul li a {
+	font-size: 16px;
+}
+.update_profile_btm {
+	padding: 25px 20px 30px;
+}
+.entet_info h3, .entet_info p {
+	font-size: 20px;
+}
+.update_profile_btm label, .update_profile_btm input {
+	font-size: 16px;
+}
+.save_btn input {
+	padding: 12px 48px;
+	font-size: 18px;
+}
+
 
 
 
@@ -514,6 +554,74 @@
 	padding-top: 12px;
 	padding-bottom: 20px;
 }
+.contest_info h4 {
+	font-size: 17px;
+	padding-bottom: 3px;
+}
+.contest_info p {
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+.prize_info ul li {
+	font-size: 16px;
+}
+.contest_detail_info_area {
+	padding-bottom: 30px;
+}
+.contest_submit_btn .feature_gallery_btn {
+	padding-top: 15px;
+}
+.single_judge {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.about_us_content {
+	padding: 20px 0 0px;
+}
+.about_content p {
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+.update_profile_top ul li a {
+	padding: 12px 4px;
+	font-size: 16px;
+}
+.update_profile_btm {
+	padding: 20px 15px 25px;
+}
+.entet_info h3 {
+	font-size: 18px;
+	padding-bottom: 0px;
+}
+.entet_info p {
+	font-size: 18px;
+}
+.entet_info {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.update_profile_btm label {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 1px;
+}
+.update_profile_btm input {
+	font-size: 16px;
+}
+.name_update, .upload_picture, .personal_info, .update_social_media, .update_addr, .update_bio {
+	padding-bottom: 0px;
+}
+.save_btn input {
+	padding: 10px 40px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+
+
+
+
+
 
 
 

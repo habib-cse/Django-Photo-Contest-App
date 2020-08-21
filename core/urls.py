@@ -16,6 +16,11 @@ urlpatterns = [
     path('phoconse/photo-contest',views.photo_contest,name="photo_contest"),
     path('phoconse/blog-list',views.blog_list,name="blog_list"),
     path('phoconse/blog/<int:id>',views.single_blog,name="single_blog"),
+    path('phoconse/update-profile/<int:id>',views.update_profile,name="update_profile"),
     path('phoconse/about-us',views.about_us,name="about_us"),
+    path('phoconse/contest-detail/<int:id>',views.contest_detail,name="contest_detail"),
+    path('phoconse/contact',views.contact_us,name="contact_us"),
+    path('phoconse/privacy-policy',views.privacy_policy,name="privacy_policy"),
+    path('phoconse/trums-condition',views.trums_condition,name="trums_condition"),
 
 ]

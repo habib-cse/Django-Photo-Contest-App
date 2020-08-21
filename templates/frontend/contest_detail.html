@@ -1,0 +1,256 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery page
+{% endblock title %}
+    
+{% block content %}
+    
+<section class="indvi_gallery_breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div class="indivi_gallery_title">
+                    <h3>Beautiful India - Photo Contest</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="indivi_back_home">
+                    <a href=""><span><i class="fas fa-angle-double-left"></i></span>Back to Photo Contests</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="indvi_gallery_info_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-12">
+                <div class="indvi_gallery_info contest_detail">
+                    <h2>Beautiful India</h2>
+                    <p>Submit your photographs before</p>
+                    <h4>31st March 2020</h4>
+                    <div class="latest_article_btn contest_btn">
+                        <a href="">Submit Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-12">
+                <div class="judge_area">
+                    <h2>Judges Info</h2>
+                    <div class="single_judge">
+                        <div class="judge_img">
+                            <img src="{% static 'img/judge.png' %}" alt="">
+                        </div>
+                        <div class="judge_info">
+                            <h3>Sourabh Sohariya</h3>
+                            <p>Landscape Photographer, India</p>
+                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="single_judge">
+                        <div class="judge_img">
+                            <img src="{% static 'img/judge.png' %}" alt="">
+                        </div>
+                        <div class="judge_info">
+                            <h3>Sourabh Sohariya</h3>
+                            <p>Landscape Photographer, India</p>
+                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="single_judge">
+                        <div class="judge_img">
+                            <img src="{% static 'img/judge.png' %}" alt="">
+                        </div>
+                        <div class="judge_info">
+                            <h3>Sourabh Sohariya</h3>
+                            <p>Landscape Photographer, India</p>
+                            <a href="">View Bio <img src="{% static 'img/bio-icon.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contest_detail_info_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="winner_list_title">
+                    <h3>Contest Details</h3>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="contest_info">
+                    <div class="theme_info">
+                        <h4>Theme:</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="deadline">
+                        <h4>Deadline:</h4>
+                        <p>31st March 2020</p>
+                    </div>
+                    <div class="prize_info">
+                        <h4>Prizes:</h4>
+                        <ul>
+                            <li>1st Place - Rs.5000/-</li>
+                            <li>1st Place - Rs.5000/-</li>
+                            <li>1st Place - Rs.5000/-</li>
+                        </ul>
+                    </div>
+                    <div class="eligibility_info">
+                        <h4>Eligibility:</h4>
+                        <p>Open to all photographers worldwide.</p>
+                    </div>
+                    <div class="entry_info">
+                        <h4>Entry Fee:</h4>
+                        <p>Free</p>
+                    </div>
+                    <div class="copyright_info">
+                        <h4>Copyrights & Usage Rights:</h4>
+                        <p>Copyright of the images will remain at all times with the photographer.</p>
+                        <p>Images will be used strictly in connection to the awards and will not be used for any other marketing purposes other than to promote Phoconse. Images will not be resold or used by any other third party. If there is a request for such, we will forward that request to the photographer via e-mail.</p>
+                    </div>
+                    <div class="contest_submit_btn">
+                        <div class="feature_gallery_btn">
+                            <a href="">Submit Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="similar_contest_gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="similar_contest_title">
+                    <h3>Other Photo Contests</h3>
+                </div>
+                <div class="similar_slider_area owl-carousel">
+                    <div class="single_similar_slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="contest_image">
+                                    <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                    <div class="ongoing_cont">
+                                        <img src="{% static 'img/ongoing.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="contest_name other_contest">
+                                        <h3>Beautiful India</h3>
+                                    </div>
+                                    <div class="contest_date">
+                                        <h4>Month & Year:</h4>
+                                        <p>01st March 2020 - 31st March 2020</p>
+                                    </div>
+                                    <div class="contest_judges">
+                                        <h4>judges:</h4>
+                                        <ul>
+                                            <li><a href="">Sourabh Sohariya,</a></li>
+                                            <li><a href=""> Geeta Surapaneni</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              </div>
+                        </a>
+                    </div>
+                    <div class="single_similar_slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="contest_image">
+                                    <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                    <div class="upcoming_cont">
+                                        <img src="{% static 'img/upcomming.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="contest_name other_contest">
+                                        <h3>Beautiful India</h3>
+                                    </div>
+                                    <div class="contest_date">
+                                        <h4>Month & Year:</h4>
+                                        <p>01st March 2020 - 31st March 2020</p>
+                                    </div>
+                                    <div class="contest_judges">
+                                        <h4>judges:</h4>
+                                        <ul>
+                                            <li><a href="">Sourabh Sohariya,</a></li>
+                                            <li><a href=""> Geeta Surapaneni</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              </div>
+                        </a>
+                    </div>
+                    <div class="single_similar_slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="contest_image">
+                                    <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                    <div class="ongoing_cont">
+                                        <img src="{% static 'img/ongoing.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="contest_name other_contest">
+                                        <h3>Beautiful India</h3>
+                                    </div>
+                                    <div class="contest_date">
+                                        <h4>Month & Year:</h4>
+                                        <p>01st March 2020 - 31st March 2020</p>
+                                    </div>
+                                    <div class="contest_judges">
+                                        <h4>judges:</h4>
+                                        <ul>
+                                            <li><a href="">Sourabh Sohariya,</a></li>
+                                            <li><a href=""> Geeta Surapaneni</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              </div>
+                        </a>
+                    </div>
+                    <div class="single_similar_slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="contest_image">
+                                    <img class="card-img-top" src="{% static 'img/single_img.png' %}" alt="Card image cap">
+                                    <div class="upcoming_cont">
+                                        <img src="{% static 'img/upcomming.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="contest_name other_contest">
+                                        <h3>Beautiful India</h3>
+                                    </div>
+                                    <div class="contest_date">
+                                        <h4>Month & Year:</h4>
+                                        <p>01st March 2020 - 31st March 2020</p>
+                                    </div>
+                                    <div class="contest_judges">
+                                        <h4>judges:</h4>
+                                        <ul>
+                                            <li><a href="">Sourabh Sohariya,</a></li>
+                                            <li><a href=""> Geeta Surapaneni</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
